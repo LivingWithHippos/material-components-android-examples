@@ -17,6 +17,9 @@
 
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/poppins</item>
+        <item>@font/freight_sans</item>
+        <item>@font/space_mono</item>
         <item>@font/roboto_black_italic</item>
     </array>
 </resources>
