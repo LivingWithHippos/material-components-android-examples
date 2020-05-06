@@ -69,7 +69,7 @@
                       android:textAppearance="?textAppearanceHeadline6"
                       android:textColor="@color/material_on_surface_emphasis_high_type"
                       android:textStyle="bold"
-                      app:fontFamily="@font/roboto_black_italic" />
+                      app:fontFamily="@font/freight_sans" />
 
                 </LinearLayout>
 

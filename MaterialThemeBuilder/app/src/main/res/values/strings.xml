@@ -111,4 +111,12 @@
     <string name="text_appearance_button_label">Button</string>
     <string name="text_appearance_caption_label">Caption</string>
     <string name="text_appearance_overline_label">Overline</string>
+    <string name="role_example">Role: MTF Guard</string>
+    <string name="name_example">John Carter</string>
+    <string name="play">Play</string>
+    <string name="grade">Grade</string>
+    <string name="clearance">Clearance</string>
+    <string name="grade_example">05</string>
+    <string name="clearance_example">5/1337</string>
+    <string name="mtf_lore_ipsum">Mobile Task Forces (MTFs) are elite units comprised of personnel drawn from across the Foundation and are mobilized to deal with specific threats or situations that sometimes exceed the operational capacity or expertise of regular field personnel and — as their name suggests — may be relocated between facilities or locations as they are needed. Mobile Task Force personnel represent the \"best of the best\" of the Foundation.</string>
 </resources>
