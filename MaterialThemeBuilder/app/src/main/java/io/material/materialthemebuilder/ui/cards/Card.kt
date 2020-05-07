@@ -1,5 +1,6 @@
 package io.material.materialthemebuilder.ui.cards
 
 enum class Card {
-    FOUNDATION_ID
+    FOUNDATION_ID,
+    SCP_FILE,
 }

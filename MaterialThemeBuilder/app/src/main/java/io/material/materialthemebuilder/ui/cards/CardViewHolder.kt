@@ -16,6 +16,10 @@ sealed class CardViewHolder (val view: View) : RecyclerView.ViewHolder(view) {
             parent: ViewGroup
     ) : CardViewHolder(inflate(parent, R.layout.card_foundation_id))
 
+    class SCPFileCardViewHolder(
+            parent: ViewGroup
+    ) : CardViewHolder(inflate(parent, R.layout.card_scp_id))
+
 
     companion object {
         fun create(
@@ -25,6 +29,7 @@ sealed class CardViewHolder (val view: View) : RecyclerView.ViewHolder(view) {
         ): CardViewHolder {
             return when (Card.values()[viewType]) {
                 Card.FOUNDATION_ID -> CardViewHolder.FoundationIDCardViewHolder(parent)
+                Card.SCP_FILE -> CardViewHolder.SCPFileCardViewHolder(parent)
             }
         }
 

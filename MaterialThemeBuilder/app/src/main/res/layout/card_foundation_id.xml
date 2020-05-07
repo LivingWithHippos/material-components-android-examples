@@ -47,7 +47,7 @@
                 android:id="@+id/scp_card_overline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/role_example"
+                android:text="@string/group_foundation_example"
                 android:textAppearance="?attr/textAppearanceOverline"
                 android:textColor="@color/material_on_surface_emphasis_medium"
                 android:layout_marginTop="@dimen/keyline_4"
