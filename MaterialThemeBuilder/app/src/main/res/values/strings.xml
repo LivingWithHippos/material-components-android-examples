@@ -24,6 +24,7 @@
     <string name="tab_title_instructions">Instructions</string>
     <string name="tab_title_components">Components</string>
     <string name="tab_title_theme_summary">Theme summary</string>
+    <string name="tab_title_cards">Cards</string>
 
     <!--Instructions-->
     <string name="instructions_how_to">Build your own custom Material Theme by remixing and styling these themeable components.\n\nModify the variables in your project\'s color.xml, type.xml and shape.xml files to see your custom styles cascade through Material Components for Android.</string>

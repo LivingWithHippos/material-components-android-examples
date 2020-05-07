@@ -21,6 +21,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import io.material.materialthemebuilder.R
+import io.material.materialthemebuilder.ui.cards.CardsFragment
 import io.material.materialthemebuilder.ui.component.ComponentFragment
 import io.material.materialthemebuilder.ui.instruction.InstructionsFragment
 import io.material.materialthemebuilder.ui.themesummary.ThemeSummaryFragment
@@ -36,7 +37,8 @@ class MainViewPagerAdapter(
   enum class MainFragments(val titleRes: Int) {
     INSTRUCTIONS(R.string.tab_title_instructions),
     THEME_SUMMARY(R.string.tab_title_theme_summary),
-    COMPONENTS(R.string.tab_title_components)
+    COMPONENTS(R.string.tab_title_components),
+    CARDS(R.string.tab_title_cards)
   }
 
   override fun getCount(): Int = MainFragments.values().size
@@ -54,6 +56,7 @@ class MainViewPagerAdapter(
       MainFragments.INSTRUCTIONS -> InstructionsFragment()
       MainFragments.THEME_SUMMARY -> ThemeSummaryFragment()
       MainFragments.COMPONENTS -> ComponentFragment()
+      MainFragments.CARDS -> CardsFragment()
     }
   }
 }
