@@ -9,6 +9,15 @@
     android:paddingEnd="@dimen/keyline_4"
     android:paddingBottom="@dimen/keyline_5">
 
+    <io.material.materialthemebuilder.widget.LabelLinkView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/scp_id"
+        app:linkUrl="http://www.scp-wiki.net/component:anomaly-class-bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/scpCard"
@@ -16,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/component_label_horizontal_margin"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/label">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
