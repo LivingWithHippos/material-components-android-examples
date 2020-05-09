@@ -14,8 +14,8 @@
         android:id="@+id/label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/card_label_title"
-        app:linkUrl="https://material.io/design/components/cards.html"
+        android:text="@string/foundation_id"
+        app:linkUrl="http://www.scp-wiki.net/security-clearance-levels"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

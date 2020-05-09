@@ -133,4 +133,5 @@
     <string name="level_2">Level2</string>
     <string name="scp_2105_lore">SCP-2105 is a DOS program called \"mv_sk1r.COM\" and is compressed in a .tar.gz archive that also contains a .txt file [Designated DCMT-2105-1], both of the same name.\n\nSCP-2105 can be run on any operating system, despite the .COM filetype generally only functioning on DOS using the COMMAND.COM default program. However, when SCP-2105 is run on other operating systems, it creates its own instance of COMMAND.COM to run inside. Once running, the user is offered multiple options.</string>
     <string name="scp_id">SCP ID Card</string>
+    <string name="foundation_id">Foundation ID Card</string>
 </resources>
