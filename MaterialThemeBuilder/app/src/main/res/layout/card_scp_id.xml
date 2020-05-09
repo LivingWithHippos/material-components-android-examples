@@ -82,7 +82,7 @@
                     android:id="@+id/scp_class_circle"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:layout_marginRight="@dimen/keyline_4"
+                    android:layout_marginEnd="@dimen/keyline_4"
                     android:scaleType="centerCrop"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
