@@ -54,9 +54,9 @@ class MainViewPagerAdapter(
   override fun getItem(position: Int): Fragment {
     return when (getItemType(position)) {
       MainFragments.INSTRUCTIONS -> InstructionsFragment()
+      MainFragments.CARDS -> CardsFragment()
       MainFragments.THEME_SUMMARY -> ThemeSummaryFragment()
       MainFragments.COMPONENTS -> ComponentFragment()
-      MainFragments.CARDS -> CardsFragment()
     }
   }
 }
