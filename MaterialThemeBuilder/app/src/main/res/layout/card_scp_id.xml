@@ -194,7 +194,7 @@
                     android:scaleType="fitCenter"
                     app:layout_constraintBottom_toBottomOf="@id/iv_disruption_circle"
                     app:layout_constraintEnd_toEndOf="@id/iv_disruption_circle"
-                    app:layout_constraintStart_toStartOf="@id/scp_disruiv_disruption_circleption_rectangle"
+                    app:layout_constraintStart_toStartOf="@id/iv_disruption_circle"
                     app:layout_constraintTop_toTopOf="@id/iv_disruption_circle"
                     app:srcCompat="@drawable/disruption_vlam" />
 
