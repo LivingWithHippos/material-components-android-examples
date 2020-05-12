@@ -25,6 +25,7 @@
     <string name="tab_title_components">Components</string>
     <string name="tab_title_theme_summary">Theme summary</string>
     <string name="tab_title_cards">Cards</string>
+    <string name="tab_title_menus">Menus</string>
 
     <!--Instructions-->
     <string name="instructions_how_to">Build your own custom Material Theme by remixing and styling these themeable components.\n\nModify the variables in your project\'s color.xml, type.xml and shape.xml files to see your custom styles cascade through Material Components for Android.</string>
@@ -134,4 +135,11 @@
     <string name="scp_2105_lore">SCP-2105 is a DOS program called \"mv_sk1r.COM\" and is compressed in a .tar.gz archive that also contains a .txt file [Designated DCMT-2105-1], both of the same name.\n\nSCP-2105 can be run on any operating system, despite the .COM filetype generally only functioning on DOS using the COMMAND.COM default program. However, when SCP-2105 is run on other operating systems, it creates its own instance of COMMAND.COM to run inside. Once running, the user is offered multiple options.</string>
     <string name="scp_id">SCP ID Card</string>
     <string name="foundation_id">Foundation ID Card</string>
+
+
+    <string name="new_game">New Game</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+    <string name="load_game">Load Game</string>
+    <string name="main_menu">Main Menu</string>
 </resources>

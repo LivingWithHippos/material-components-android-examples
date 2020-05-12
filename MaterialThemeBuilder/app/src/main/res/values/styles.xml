@@ -38,6 +38,14 @@
         <item name="itemTextAppearance">?attr/textAppearanceBody2</item>
     </style>
 
+    <!--Main Menu Buttons-->
+    <style name="Widget.MyTheme.MainMenuButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="backgroundTint">#222</item>
+        <item name="android:background">@drawable/button_menu_main</item>
+    </style>
+
     <!-- Vertical Bar with a tint -->
     <style name="VerticalBar">
         <item name="android:layout_width">11dp</item>
