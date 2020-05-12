@@ -1,0 +1,96 @@
+package io.material.materialthemebuilder.widget
+
+import android.content.Context
+import android.graphics.drawable.Drawable
+import android.util.AttributeSet
+import android.view.View
+import android.widget.FrameLayout
+import android.widget.ImageView
+import android.widget.TextView
+import io.material.materialthemebuilder.R
+
+class FoundationCardView@JvmOverloads constructor(
+        context: Context,
+        attrs: AttributeSet? = null,
+        defStyleAttr: Int = 0,
+        defStyleRes: Int = 0
+) : FrameLayout(context, attrs, defStyleAttr, defStyleRes) {
+
+    private val roleTextView: TextView
+    private val clearanceTextView: TextView
+    private val gradeTextView: TextView
+    private val descriptionTextView: TextView
+    private val profileImageView: ImageView
+
+    private var profilePic: Drawable? = null
+        set(value) {
+            if (value == null) {
+                profileImageView.visibility = View.INVISIBLE
+            } else {
+                profileImageView.setImageDrawable(value)
+                profileImageView.visibility = View.VISIBLE
+            }
+            field = value
+        }
+
+    private var roleText: String = ""
+        set(value) {
+            roleTextView.text = value
+            field = value
+        }
+
+    private var clearanceText: String = ""
+        set(value) {
+            clearanceTextView.text = value
+            field = value
+        }
+
+    private var gradeText: String = ""
+        set(value) {
+            gradeTextView.text = value
+            field = value
+        }
+
+    private var descriptionText: String = ""
+        set(value) {
+            descriptionTextView.text = value
+            field = value
+        }
+
+    init {
+        //todo: try with ViewBinding
+        val view = View.inflate(context, R.layout.card_foundation_view_layout, this)
+        roleTextView = view.findViewById(R.id.scp_card_overline)
+        clearanceTextView = view.findViewById(R.id.scp_clearance_body)
+        gradeTextView = view.findViewById(R.id.scp_grade_body)
+        descriptionTextView = view.findViewById(R.id.scp_card_body)
+        profileImageView = view.findViewById(R.id.scp_card_header)
+
+        val a = context.theme.obtainStyledAttributes(
+                attrs,
+                R.styleable.FoundationCardView,
+                defStyleAttr,
+                defStyleRes
+        )
+
+        roleText = a.getString(R.styleable.FoundationCardView_android_text) ?: roleText
+        clearanceText = a.getString(R.styleable.FoundationCardView_clearanceText) ?: clearanceText
+        gradeText = a.getString(R.styleable.FoundationCardView_gradeText) ?: gradeText
+        descriptionText = a.getString(R.styleable.FoundationCardView_android_text) ?: descriptionText
+        profilePic = a.getDrawable(R.styleable.FoundationCardView_rolePicture)
+
+        a.recycle()
+    }
+}
+
+/**
+  <!--Foundation Card View attributes-->
+    <declare-styleable name="FoundationCardView">
+        <attr name="android:text"/>
+        <attr name="roleText" format="string"/>
+        <attr name="gradeText" format="string"/>
+        <attr name="clearanceText" format="string"/>
+        <attr name="rolePicture" format="reference"/>
+        <attr name="previewTextColor" format="reference"/>
+    </declare-styleable>
+ */
