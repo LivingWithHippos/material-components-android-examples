@@ -3,12 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root_layout"
     android:layout_width="match_parent"
-    android:layout_height="70dp"
-    android:layout_margin="10dp"
+    android:layout_height="match_parent"
     android:background="#d6eaf2"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintStart_toStartOf="parent">
-    <!--TODO: remove default text and pictures -->
+    <!--TODO: remove default text and pictures and values -->
         <View
             android:id="@+id/iv_bar"
             style="@style/VerticalBar"
