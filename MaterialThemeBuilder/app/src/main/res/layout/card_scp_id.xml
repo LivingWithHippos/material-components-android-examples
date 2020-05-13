@@ -50,7 +50,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/class_title"
+                    android:id="@+id/tv_class_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/keyline_4"
@@ -75,7 +75,7 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/class_title" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_class_title" />
 
 
                 <ImageView
@@ -104,197 +104,35 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cl_disruption"
+            <io.material.materialthemebuilder.widget.SCPSecondaryClassView
+                android:id="@+id/disruption"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:layout_margin="10dp"
-                android:background="#d6eaf2"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_classification"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cl_classification">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:classTitleText="@string/disruption_title"
+                app:classBodyText="@string/vlam"
+                app:classNumber="2"
+                app:classPicture="@drawable/disruption_vlam"
+                app:darkColor="#0087bd"
+                app:lightColor="#d6eaf2"
+                />
 
-                <View
-                    android:id="@+id/bar_disruption"
-                    style="@style/VerticalBar"
-                    android:background="#0087bd"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/disruption_title"
-                    style="@style/TextAppearance.MyTheme.Headline7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/keyline_4"
-                    android:text="@string/disruption_title"
-                    android:textAllCaps="true"
-                    android:textColor="@color/material_on_surface_emphasis_high_type"
-                    app:layout_constraintBottom_toTopOf="@+id/disruption_definition"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_chainStyle="packed" />
-
-                <TextView
-                    android:id="@+id/disruption_definition"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/keyline_4"
-                    android:text="@string/vlam"
-                    android:textAllCaps="true"
-                    android:textAppearance="?attr/textAppearanceHeadline5"
-                    android:textColor="@color/material_on_surface_emphasis_high_type"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/disruption_title" />
-
-
-                <ImageView
-                    android:id="@+id/scp_disruption_rectangle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/keyline_4"
-                    android:scaleType="fitCenter"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/scp_classes_shape" />
-
-                <TextView
-                    android:id="@+id/tvDisruption"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="2"
-                    android:textAppearance="?attr/textAppearanceBody1"
-                    android:textColor="#fff"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@id/scp_disruption_rectangle"
-                    app:layout_constraintStart_toStartOf="@id/scp_disruption_rectangle"
-                    app:layout_constraintTop_toTopOf="@id/scp_disruption_rectangle" />
-
-
-                <ImageView
-                    android:id="@+id/iv_disruption_circle"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="5dp"
-                    android:scaleType="centerCrop"
-                    android:tint="#0087bd"
-                    app:layout_constraintBottom_toBottomOf="@id/scp_disruption_rectangle"
-                    app:layout_constraintEnd_toEndOf="@id/scp_disruption_rectangle"
-                    app:layout_constraintTop_toTopOf="@id/scp_disruption_rectangle"
-                    app:srcCompat="@drawable/scp_class_circle" />
-
-                <ImageView
-                    android:id="@+id/iv_disruption"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:scaleType="fitCenter"
-                    app:layout_constraintBottom_toBottomOf="@id/iv_disruption_circle"
-                    app:layout_constraintEnd_toEndOf="@id/iv_disruption_circle"
-                    app:layout_constraintStart_toStartOf="@id/iv_disruption_circle"
-                    app:layout_constraintTop_toTopOf="@id/iv_disruption_circle"
-                    app:srcCompat="@drawable/disruption_vlam" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cl_risk"
+            <io.material.materialthemebuilder.widget.SCPSecondaryClassView
+                android:id="@+id/risk"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:layout_margin="10dp"
-                android:background="#d6eee6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cl_disruption">
-
-                <View
-                    android:id="@+id/bar_risk"
-                    style="@style/VerticalBar"
-                    android:background="#009f6b"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/risk_title"
-                    style="@style/TextAppearance.MyTheme.Headline7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/keyline_4"
-                    android:text="@string/risk_title"
-                    android:textAllCaps="true"
-                    android:textColor="@color/material_on_surface_emphasis_high_type"
-                    app:layout_constraintBottom_toTopOf="@+id/risk_definition"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_chainStyle="packed" />
-
-                <TextView
-                    android:id="@+id/risk_definition"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/keyline_4"
-                    android:text="@string/Notice"
-                    android:textAllCaps="true"
-                    android:textAppearance="?attr/textAppearanceHeadline5"
-                    android:textColor="@color/material_on_surface_emphasis_high_type"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/risk_title" />
-
-
-                <ImageView
-                    android:id="@+id/scp_risk_rectangle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/keyline_4"
-                    android:scaleType="fitCenter"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/scp_classes_shape" />
-
-                <TextView
-                    android:id="@+id/tvRisk"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="1"
-                    android:textAppearance="?attr/textAppearanceBody1"
-                    android:textColor="#fff"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@id/scp_risk_rectangle"
-                    app:layout_constraintStart_toStartOf="@id/scp_risk_rectangle"
-                    app:layout_constraintTop_toTopOf="@id/scp_risk_rectangle" />
-
-                <ImageView
-                    android:id="@+id/iv_risk_circle"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="5dp"
-                    android:scaleType="centerCrop"
-                    android:tint="#009f6b"
-                    app:layout_constraintBottom_toBottomOf="@id/scp_risk_rectangle"
-                    app:layout_constraintEnd_toEndOf="@id/scp_risk_rectangle"
-                    app:layout_constraintTop_toTopOf="@id/scp_risk_rectangle"
-                    app:srcCompat="@drawable/scp_class_circle" />
-
-                <ImageView
-                    android:id="@+id/iv_risk"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:scaleType="fitCenter"
-                    app:layout_constraintBottom_toBottomOf="@id/iv_risk_circle"
-                    app:layout_constraintEnd_toEndOf="@id/iv_risk_circle"
-                    app:layout_constraintStart_toStartOf="@id/iv_risk_circle"
-                    app:layout_constraintTop_toTopOf="@id/iv_risk_circle"
-                    app:srcCompat="@drawable/risk_notice" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                app:layout_constraintTop_toBottomOf="@+id/disruption"
+                app:classTitleText="@string/risk_title"
+                app:classBodyText="@string/Notice"
+                app:classNumber="1"
+                app:classPicture="@drawable/risk_notice"
+                app:darkColor="#009f6b"
+                app:lightColor="#d6eee6"
+                />
 
             <TextView
                 android:id="@+id/tv_role"
@@ -306,7 +144,7 @@
                 android:textAppearance="?attr/textAppearanceOverline"
                 android:textColor="@color/material_on_surface_emphasis_medium"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cl_risk" />
+                app:layout_constraintTop_toBottomOf="@+id/risk" />
 
             <TextView
                 android:id="@+id/tv_item_title"
