@@ -83,15 +83,3 @@ class FoundationCardView@JvmOverloads constructor(
         a.recycle()
     }
 }
-
-/**
-  <!--Foundation Card View attributes-->
-    <declare-styleable name="FoundationCardView">
-        <attr name="android:text"/>
-        <attr name="roleText" format="string"/>
-        <attr name="gradeText" format="string"/>
-        <attr name="clearanceText" format="string"/>
-        <attr name="rolePicture" format="reference"/>
-        <attr name="previewTextColor" format="reference"/>
-    </declare-styleable>
- */
