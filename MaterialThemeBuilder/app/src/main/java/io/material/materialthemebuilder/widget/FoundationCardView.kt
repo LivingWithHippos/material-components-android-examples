@@ -60,7 +60,7 @@ class FoundationCardView@JvmOverloads constructor(
     init {
         //todo: try with ViewBinding
         val view = View.inflate(context, R.layout.card_foundation_view_layout, this)
-        roleTextView = view.findViewById(R.id.scp_card_overline)
+        roleTextView = view.findViewById(R.id.tv_role)
         clearanceTextView = view.findViewById(R.id.scp_clearance_body)
         gradeTextView = view.findViewById(R.id.scp_grade_body)
         descriptionTextView = view.findViewById(R.id.scp_card_body)
@@ -73,7 +73,7 @@ class FoundationCardView@JvmOverloads constructor(
                 defStyleRes
         )
 
-        roleText = a.getString(R.styleable.FoundationCardView_android_text) ?: roleText
+        roleText = a.getString(R.styleable.FoundationCardView_roleText) ?: roleText
         clearanceText = a.getString(R.styleable.FoundationCardView_clearanceText) ?: clearanceText
         gradeText = a.getString(R.styleable.FoundationCardView_gradeText) ?: gradeText
         descriptionText = a.getString(R.styleable.FoundationCardView_android_text) ?: descriptionText

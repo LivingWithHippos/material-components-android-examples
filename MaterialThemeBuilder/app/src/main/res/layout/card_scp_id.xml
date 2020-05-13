@@ -297,7 +297,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:id="@+id/scp_card_overline"
+                android:id="@+id/tv_role"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/keyline_4"
@@ -319,7 +319,7 @@
                 android:textAppearance="?attr/textAppearanceHeadline6"
                 android:textColor="@color/material_on_surface_emphasis_high_type"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/scp_card_overline" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_role" />
 
             <TextView
                 android:id="@+id/tv_item"

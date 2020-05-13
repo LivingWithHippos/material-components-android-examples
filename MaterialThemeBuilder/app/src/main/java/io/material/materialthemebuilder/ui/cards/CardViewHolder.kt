@@ -14,7 +14,7 @@ sealed class CardViewHolder (val view: View) : RecyclerView.ViewHolder(view) {
 
     class FoundationIDCardViewHolder(
             parent: ViewGroup
-    ) : CardViewHolder(inflate(parent, R.layout.card_foundation_id))
+    ) : CardViewHolder(inflate(parent, R.layout.card_foundation_id_mtf))
 
     class SCPFileCardViewHolder(
             parent: ViewGroup
