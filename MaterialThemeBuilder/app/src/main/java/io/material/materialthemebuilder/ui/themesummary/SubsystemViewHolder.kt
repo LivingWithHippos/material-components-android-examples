@@ -21,42 +21,40 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import io.material.materialthemebuilder.R
-import io.material.materialthemebuilder.ui.themesummary.Subsystem.COLOR
-import io.material.materialthemebuilder.ui.themesummary.Subsystem.TYPE
-import io.material.materialthemebuilder.ui.themesummary.Subsystem.SHAPE
+import io.material.materialthemebuilder.ui.themesummary.Subsystem.*
 
 /**
  * Sealed class to define all [RecyclerView.ViewHolder]s used to display [Subsystem]s.
  */
 sealed class SubsystemViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
 
-  open fun bind(subsystem: Subsystem) {
-    // Override in subclass if needed.
-  }
-
-  class ColorSubsystemViewHolder(
-    parent: ViewGroup
-  ) : SubsystemViewHolder(inflate(parent, R.layout.subsystem_color))
-
-  class TypeSubsystemViewHolder(
-    parent: ViewGroup
-  ) : SubsystemViewHolder(inflate(parent, R.layout.subsystem_type))
-
-  class ShapeSubsystemViewHolder(
-    parent: ViewGroup
-  ) : SubsystemViewHolder(inflate(parent, R.layout.subsystem_shape))
-
-  companion object {
-    fun create(parent: ViewGroup, viewType: Int): SubsystemViewHolder {
-      return when (Subsystem.values()[viewType]) {
-        COLOR -> SubsystemViewHolder.ColorSubsystemViewHolder(parent)
-        TYPE -> SubsystemViewHolder.TypeSubsystemViewHolder(parent)
-        SHAPE -> SubsystemViewHolder.ShapeSubsystemViewHolder(parent)
-      }
+    open fun bind(subsystem: Subsystem) {
+        // Override in subclass if needed.
     }
 
-    private fun inflate(parent: ViewGroup, layout: Int): View {
-      return LayoutInflater.from(parent.context).inflate(layout, parent, false)
+    class ColorSubsystemViewHolder(
+            parent: ViewGroup
+    ) : SubsystemViewHolder(inflate(parent, R.layout.subsystem_color))
+
+    class TypeSubsystemViewHolder(
+            parent: ViewGroup
+    ) : SubsystemViewHolder(inflate(parent, R.layout.subsystem_type))
+
+    class ShapeSubsystemViewHolder(
+            parent: ViewGroup
+    ) : SubsystemViewHolder(inflate(parent, R.layout.subsystem_shape))
+
+    companion object {
+        fun create(parent: ViewGroup, viewType: Int): SubsystemViewHolder {
+            return when (Subsystem.values()[viewType]) {
+                COLOR -> SubsystemViewHolder.ColorSubsystemViewHolder(parent)
+                TYPE -> SubsystemViewHolder.TypeSubsystemViewHolder(parent)
+                SHAPE -> SubsystemViewHolder.ShapeSubsystemViewHolder(parent)
+            }
+        }
+
+        private fun inflate(parent: ViewGroup, layout: Int): View {
+            return LayoutInflater.from(parent.context).inflate(layout, parent, false)
+        }
     }
-  }
 }

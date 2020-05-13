@@ -4,7 +4,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 
-class CardAdapter (
+class CardAdapter(
         private val listener: CardAdapterListener
 ) : ListAdapter<Card, CardViewHolder>(DIFF_CALLBACK) {
 
@@ -26,6 +26,7 @@ class CardAdapter (
             override fun areItemsTheSame(oldItem: Card, newItem: Card): Boolean {
                 return oldItem == newItem
             }
+
             override fun areContentsTheSame(oldItem: Card, newItem: Card): Boolean {
                 return oldItem == newItem
             }

@@ -30,21 +30,21 @@ import io.material.materialthemebuilder.R
  */
 class ThemeSummaryFragment : Fragment() {
 
-  override fun onCreateView(
-    inflater: LayoutInflater,
-    container: ViewGroup?,
-    savedInstanceState: Bundle?
-  ): View? {
-    return inflater.inflate(R.layout.fragment_theme_summary, container, false)
-  }
+    override fun onCreateView(
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_theme_summary, container, false)
+    }
 
-  override fun onViewCreated(view: View, savedInstanceBundle: Bundle?) {
-    super.onViewCreated(view, savedInstanceBundle)
+    override fun onViewCreated(view: View, savedInstanceBundle: Bundle?) {
+        super.onViewCreated(view, savedInstanceBundle)
 
-    val adapter = SubsystemAdapter()
-    val recyclerView: RecyclerView = view.findViewById(R.id.recycler_view)
-    recyclerView.layoutManager = LinearLayoutManager(requireContext())
-    recyclerView.adapter = adapter
-    adapter.submitList(Subsystem.values().toList())
-  }
+        val adapter = SubsystemAdapter()
+        val recyclerView: RecyclerView = view.findViewById(R.id.recycler_view)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.adapter = adapter
+        adapter.submitList(Subsystem.values().toList())
+    }
 }

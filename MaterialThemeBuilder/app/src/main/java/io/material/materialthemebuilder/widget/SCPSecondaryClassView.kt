@@ -13,7 +13,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import io.material.materialthemebuilder.R
-import io.material.materialthemebuilder.utilities.toSolidARGB
 
 class SCPSecondaryClassView @JvmOverloads constructor(
         context: Context,
@@ -36,7 +35,7 @@ class SCPSecondaryClassView @JvmOverloads constructor(
         set(value) {
             if (value == null) {
                 val defaultBackground: Drawable? = context.getDrawable(R.drawable.scp_classes_shape)
-                if (defaultBackground==null)
+                if (defaultBackground == null)
                     classBackgroundImageView.visibility = View.INVISIBLE
                 else
                     classBackgroundImageView.setImageDrawable(defaultBackground)
@@ -50,7 +49,7 @@ class SCPSecondaryClassView @JvmOverloads constructor(
     //todo: maybe remove this, it can be changed using a different drawable for backgroundPic
     private var backgroundFillColor: Int = Color.parseColor("#0c0c0c")
         set(value) {
-            when(val drawable = classBackgroundImageView.drawable) {
+            when (val drawable = classBackgroundImageView.drawable) {
                 is ShapeDrawable -> drawable.paint.color = value
                 is ColorDrawable -> drawable.color = value
             }
@@ -60,7 +59,7 @@ class SCPSecondaryClassView @JvmOverloads constructor(
     var darkFillColor: Int = Color.parseColor("#0c0c0c")
         set(value) {
             barView.setBackgroundColor(value)
-            when(val drawable = circleImageView.drawable) {
+            when (val drawable = circleImageView.drawable) {
                 is ShapeDrawable -> drawable.paint.color = value
                 is ColorDrawable -> drawable.color = value
                 is GradientDrawable -> drawable.setTint(value)
@@ -77,7 +76,7 @@ class SCPSecondaryClassView @JvmOverloads constructor(
         set(value) {
             if (value == null) {
                 val defaultBackground: Drawable? = context.getDrawable(R.drawable.scp_class_circle)
-                if (defaultBackground==null)
+                if (defaultBackground == null)
                     circleImageView.visibility = View.INVISIBLE
                 else
                     circleImageView.setImageDrawable(defaultBackground)
@@ -138,9 +137,12 @@ class SCPSecondaryClassView @JvmOverloads constructor(
         //todo: add automatic generation from a variable type and its values  CLASS_DISRUPTION_VLAM
         // or CLASS_RISK_NOTICE etc. Here or on the SCP ID view.
         backgroundPic = a.getDrawable(R.styleable.SCPSecondaryClassView_backgroundPicture)
-        classNumberText = a.getString(R.styleable.SCPSecondaryClassView_classNumber) ?: classNumberText
-        classTitleText = a.getString(R.styleable.SCPSecondaryClassView_classTitleText) ?: classTitleText
-        classBodyText = a.getString(R.styleable.SCPSecondaryClassView_classBodyText) ?: classBodyText
+        classNumberText = a.getString(R.styleable.SCPSecondaryClassView_classNumber)
+                ?: classNumberText
+        classTitleText = a.getString(R.styleable.SCPSecondaryClassView_classTitleText)
+                ?: classTitleText
+        classBodyText = a.getString(R.styleable.SCPSecondaryClassView_classBodyText)
+                ?: classBodyText
         circlePic = a.getDrawable(R.styleable.SCPSecondaryClassView_circlePicture)
         classPic = a.getDrawable(R.styleable.SCPSecondaryClassView_classPicture)
 

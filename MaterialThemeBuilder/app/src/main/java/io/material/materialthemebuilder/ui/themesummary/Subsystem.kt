@@ -23,5 +23,5 @@ package io.material.materialthemebuilder.ui.themesummary
  * here will be the order they are displayed in by [SubsystemAdapter].
  */
 enum class Subsystem {
-  COLOR, SHAPE, TYPE
+    COLOR, SHAPE, TYPE
 }

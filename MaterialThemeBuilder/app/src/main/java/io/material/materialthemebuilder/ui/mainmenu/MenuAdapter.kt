@@ -4,8 +4,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 
-class MenuAdapter (
-private val listener: MenuAdapterListener
+class MenuAdapter(
+        private val listener: MenuAdapterListener
 ) : ListAdapter<Menu, MenuViewHolder>(DIFF_CALLBACK) {
 
     interface MenuAdapterListener {
@@ -26,6 +26,7 @@ private val listener: MenuAdapterListener
             override fun areItemsTheSame(oldItem: Menu, newItem: Menu): Boolean {
                 return oldItem == newItem
             }
+
             override fun areContentsTheSame(oldItem: Menu, newItem: Menu): Boolean {
                 return oldItem == newItem
             }

@@ -23,20 +23,20 @@ package io.material.materialthemebuilder.ui.component
  * here will be the order they are displayed in by [ComponentAdapter].
  */
 enum class Component {
-  BUTTON,
-  FAB,
-  CARD,
-  TOP_APP_BAR,
-  CHIP,
-  DRAWER,
-  TEXT_FIELD,
-  BOTTOM_NAVIGATION,
-  SWITCH,
-  RADIO_BUTTON,
-  CHECKBOX,
-  BOTTOM_APP_BAR,
-  TABS,
-  SNACKBAR,
-  DIALOG,
-  BOTTOM_SHEET
+    BUTTON,
+    FAB,
+    CARD,
+    TOP_APP_BAR,
+    CHIP,
+    DRAWER,
+    TEXT_FIELD,
+    BOTTOM_NAVIGATION,
+    SWITCH,
+    RADIO_BUTTON,
+    CHECKBOX,
+    BOTTOM_APP_BAR,
+    TABS,
+    SNACKBAR,
+    DIALOG,
+    BOTTOM_SHEET
 }

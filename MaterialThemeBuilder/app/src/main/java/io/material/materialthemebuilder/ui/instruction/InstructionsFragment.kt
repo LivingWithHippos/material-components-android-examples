@@ -31,25 +31,25 @@ import io.material.materialthemebuilder.R
  */
 class InstructionsFragment : Fragment() {
 
-  override fun onCreateView(
-    inflater: LayoutInflater,
-    container: ViewGroup?,
-    savedInstanceState: Bundle?
-  ): View? {
-    return inflater.inflate(R.layout.fragment_instructions, container, false)
-  }
-
-  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    super.onViewCreated(view, savedInstanceState)
-    val darkThemeSwitch: SwitchMaterial = view.findViewById(R.id.dark_theme_switch)
-    val preferenceRepository = (requireActivity().application as App).preferenceRepository
-
-    preferenceRepository.isDarkThemeLive.observe(this, Observer { isDarkTheme ->
-      isDarkTheme?.let { darkThemeSwitch.isChecked = it }
-    })
-
-    darkThemeSwitch.setOnCheckedChangeListener { _, checked ->
-      preferenceRepository.isDarkTheme = checked
+    override fun onCreateView(
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_instructions, container, false)
     }
-  }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val darkThemeSwitch: SwitchMaterial = view.findViewById(R.id.dark_theme_switch)
+        val preferenceRepository = (requireActivity().application as App).preferenceRepository
+
+        preferenceRepository.isDarkThemeLive.observe(this, Observer { isDarkTheme ->
+            isDarkTheme?.let { darkThemeSwitch.isChecked = it }
+        })
+
+        darkThemeSwitch.setOnCheckedChangeListener { _, checked ->
+            preferenceRepository.isDarkTheme = checked
+        }
+    }
 }

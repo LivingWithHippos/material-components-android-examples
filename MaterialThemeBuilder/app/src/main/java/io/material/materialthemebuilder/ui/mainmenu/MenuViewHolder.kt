@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import io.material.materialthemebuilder.R
 
-sealed class MenuViewHolder (val view: View) : RecyclerView.ViewHolder(view) {
+sealed class MenuViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
 
     open fun bind(menu: Menu) {
         // Override in subclass if needed.
@@ -29,7 +29,7 @@ sealed class MenuViewHolder (val view: View) : RecyclerView.ViewHolder(view) {
         ): MenuViewHolder {
             return when (Menu.values()[viewType]) {
                 Menu.MAIN -> MainMenuViewHolder(parent)
-                Menu.MAIN_V2 ->  MainMenuV2ViewHolder(parent)
+                Menu.MAIN_V2 -> MainMenuV2ViewHolder(parent)
             }
         }
 

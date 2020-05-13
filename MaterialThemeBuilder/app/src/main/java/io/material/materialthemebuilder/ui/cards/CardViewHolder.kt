@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import io.material.materialthemebuilder.R
 
-sealed class CardViewHolder (val view: View) : RecyclerView.ViewHolder(view) {
+sealed class CardViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
 
     open fun bind(card: Card) {
         // Override in subclass if needed.

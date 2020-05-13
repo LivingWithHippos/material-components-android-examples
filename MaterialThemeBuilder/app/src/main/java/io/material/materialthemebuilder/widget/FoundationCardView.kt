@@ -4,13 +4,12 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.View
-import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import io.material.materialthemebuilder.R
 
-class FoundationCardView@JvmOverloads constructor(
+class FoundationCardView @JvmOverloads constructor(
         context: Context,
         attrs: AttributeSet? = null,
         defStyleAttr: Int = 0,
@@ -78,7 +77,8 @@ class FoundationCardView@JvmOverloads constructor(
         roleText = a.getString(R.styleable.FoundationCardView_roleText) ?: roleText
         clearanceText = a.getString(R.styleable.FoundationCardView_clearanceText) ?: clearanceText
         gradeText = a.getString(R.styleable.FoundationCardView_gradeText) ?: gradeText
-        descriptionText = a.getString(R.styleable.FoundationCardView_android_text) ?: descriptionText
+        descriptionText = a.getString(R.styleable.FoundationCardView_android_text)
+                ?: descriptionText
 
         a.recycle()
     }
