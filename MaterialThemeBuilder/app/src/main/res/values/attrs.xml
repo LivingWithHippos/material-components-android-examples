@@ -66,5 +66,19 @@
         <attr name="clearanceText" format="string"/>
         <attr name="rolePicture" format="reference"/>
     </declare-styleable>
+
+    <!--SCP Text Class View attributes (like disruption and risk) -->
+    <declare-styleable name="SCPSecondaryClassView">
+        <attr name="classTitleText" format="string"/>
+        <attr name="classBodyText" format="string"/>
+        <attr name="classNumber" format="string"/>
+        <attr name="circlePicture" format="reference"/>
+        <attr name="darkColor" format="color"/>
+        <attr name="lightColor" format="color"/>
+        <!-- optional values -->
+        <attr name="classPicture" format="reference"/>
+        <attr name="backgroundPicture" format="reference"/>
+        <attr name="backgroundColor" format="color"/>
+    </declare-styleable>
     
 </resources>
