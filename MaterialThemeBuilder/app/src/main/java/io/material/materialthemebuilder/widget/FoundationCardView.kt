@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import io.material.materialthemebuilder.R
 
 class FoundationCardView@JvmOverloads constructor(
@@ -14,7 +15,7 @@ class FoundationCardView@JvmOverloads constructor(
         attrs: AttributeSet? = null,
         defStyleAttr: Int = 0,
         defStyleRes: Int = 0
-) : FrameLayout(context, attrs, defStyleAttr, defStyleRes) {
+) : ConstraintLayout(context, attrs, defStyleAttr, defStyleRes) {
 
     private val roleTextView: TextView
     private val clearanceTextView: TextView
@@ -63,7 +64,7 @@ class FoundationCardView@JvmOverloads constructor(
         roleTextView = view.findViewById(R.id.tv_role)
         clearanceTextView = view.findViewById(R.id.scp_clearance_body)
         gradeTextView = view.findViewById(R.id.scp_grade_body)
-        descriptionTextView = view.findViewById(R.id.scp_card_body)
+        descriptionTextView = view.findViewById(R.id.tv_card_body)
         profileImageView = view.findViewById(R.id.scp_card_header)
 
         val a = context.theme.obtainStyledAttributes(
@@ -73,11 +74,11 @@ class FoundationCardView@JvmOverloads constructor(
                 defStyleRes
         )
 
+        profilePic = a.getDrawable(R.styleable.FoundationCardView_rolePicture)
         roleText = a.getString(R.styleable.FoundationCardView_roleText) ?: roleText
         clearanceText = a.getString(R.styleable.FoundationCardView_clearanceText) ?: clearanceText
         gradeText = a.getString(R.styleable.FoundationCardView_gradeText) ?: gradeText
         descriptionText = a.getString(R.styleable.FoundationCardView_android_text) ?: descriptionText
-        profilePic = a.getDrawable(R.styleable.FoundationCardView_rolePicture)
 
         a.recycle()
     }
