@@ -7,12 +7,16 @@ import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.ShapeDrawable
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.marginEnd
 import io.material.materialthemebuilder.R
+import io.material.materialthemebuilder.utilities.SCP_VIEW_MODE_CONTAINMENT
+import io.material.materialthemebuilder.utilities.setIntColor
 
 class SCPSecondaryClassView @JvmOverloads constructor(
         context: Context,
@@ -62,7 +66,7 @@ class SCPSecondaryClassView @JvmOverloads constructor(
             when (val drawable = circleImageView.drawable) {
                 is ShapeDrawable -> drawable.paint.color = value
                 is ColorDrawable -> drawable.color = value
-                is GradientDrawable -> drawable.setTint(value)
+                is GradientDrawable -> drawable.setIntColor(value)
             }
             field = value
         }
@@ -72,6 +76,7 @@ class SCPSecondaryClassView @JvmOverloads constructor(
             rootLayout.setBackgroundColor(value)
             field = value
         }
+
     private var circlePic: Drawable? = null
         set(value) {
             if (value == null) {
@@ -116,6 +121,32 @@ class SCPSecondaryClassView @JvmOverloads constructor(
             field = value
         }
 
+    private var modeID: Int = 1
+        set(value) {
+
+            when(value){
+                SCP_VIEW_MODE_CONTAINMENT -> {
+                    classBackgroundImageView.visibility = View.GONE
+                    classNumberTextView.visibility = View.GONE
+                    val circleSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80f, resources.displayMetrics)
+                    val marginSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 16f, resources.displayMetrics)
+                    val strokeSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4f, resources.displayMetrics)
+                    val params = circleImageView.layoutParams as MarginLayoutParams
+                    params.width = circleSize.toInt()
+                    params.height = circleSize.toInt()
+                    params.marginEnd = marginSize.toInt()
+                    //todo: stroke not working
+                    when (val drawable = circleImageView.drawable) {
+                        is GradientDrawable -> drawable.setStroke(strokeSize.toInt(),Color.parseColor("#0c0c0c"))
+                    }
+                    val picSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 70f, resources.displayMetrics)
+                    classImageView.layoutParams.height = picSize.toInt()
+                    classImageView.layoutParams.width = picSize.toInt()
+                }
+            }
+            field = value
+        }
+
     init {
         val view = View.inflate(context, R.layout.scp_secondary_class_view, this)
 
@@ -149,6 +180,8 @@ class SCPSecondaryClassView @JvmOverloads constructor(
         backgroundFillColor = a.getColor(R.styleable.SCPSecondaryClassView_backgroundColor, backgroundFillColor)
         darkFillColor = a.getColor(R.styleable.SCPSecondaryClassView_darkColor, darkFillColor)
         lightFillColor = a.getColor(R.styleable.SCPSecondaryClassView_lightColor, lightFillColor)
+
+        modeID = a.getInteger(R.styleable.SCPSecondaryClassView_mode, modeID)
 
         a.recycle()
     }
