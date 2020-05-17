@@ -113,6 +113,8 @@
     <string name="text_appearance_button_label">Button</string>
     <string name="text_appearance_caption_label">Caption</string>
     <string name="text_appearance_overline_label">Overline</string>
+
+    <!--Various SCP stuff -->
     <string name="group_scp_example">Group: SCP</string>
     <string name="group_foundation_example">Role: MTF Guard</string>
     <string name="name_example">John Carter</string>
@@ -136,10 +138,35 @@
     <string name="scp_id">SCP ID Card</string>
     <string name="foundation_id">Foundation ID Card</string>
 
-
+    <!--Menu Values -->
     <string name="new_game">New Game</string>
     <string name="settings">Settings</string>
     <string name="about">About</string>
     <string name="load_game">Load Game</string>
     <string name="main_menu">Main Menu</string>
+
+    <!--SCP card Values -->
+    <string name="scp_containment">Containment Class:</string>
+    <string name="scp_containment_safe">Safe</string>
+    <string name="scp_containment_euclid">Euclid</string>
+    <string name="scp_containment_keter">Keter</string>
+    <string name="scp_containment_esoteric">Esoteric</string>
+    <string name="scp_containment_neutralized">Neutralized</string>
+    <string name="scp_containment_pending">Pending</string>
+    <string name="scp_containment_explained">Explained</string>
+
+    <string name="scp_disruption">Disruption Class:</string>
+    <string name="scp_disruption_dark">Dark</string>
+    <string name="scp_disruption_vlam">VLAM</string>
+    <string name="scp_disruption_keneq">Keneq</string>
+    <string name="scp_disruption_ekhi">Ekhi</string>
+    <string name="scp_disruption_amida">Amida</string>
+
+    <string name="scp_risk">Risk Class:</string>
+    <string name="scp_risk_notice">Notice</string>
+    <string name="scp_risk_caution">Caution</string>
+    <string name="scp_risk_warning">Warning</string>
+    <string name="scp_risk_danger">Danger</string>
+    <string name="scp_risk_critical">Critical</string>
+
 </resources>
