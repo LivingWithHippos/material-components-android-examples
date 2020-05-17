@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:paddingStart="@dimen/keyline_4"
+    android:paddingTop="@dimen/keyline_5"
+    android:paddingEnd="@dimen/keyline_4"
+    android:paddingBottom="@dimen/keyline_5">
+
+    <io.material.materialthemebuilder.widget.LabelLinkView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/scp_id"
+        app:linkUrl="http://www.scp-wiki.net/component:anomaly-class-bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/scpCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/component_label_horizontal_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_classification"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="#fcf5d6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!--TODO: add colors like yellow_euclid-->
+                <View
+                    android:id="@+id/bar_containment"
+                    style="@style/VerticalBar"
+                    android:background="#ffd300"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_class_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/keyline_4"
+                    android:text="@string/containment_class"
+                    android:textAllCaps="true"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="@color/material_on_surface_emphasis_high_type"
+                    app:layout_constraintBottom_toTopOf="@+id/class_definition"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/class_definition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/keyline_4"
+                    android:text="@string/euclid"
+                    android:textAllCaps="true"
+                    android:textAppearance="?attr/textAppearanceHeadline3"
+                    android:textColor="@color/material_on_surface_emphasis_high_type"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_class_title" />
+
+
+                <ImageView
+                    android:id="@+id/scp_class_circle"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="@dimen/keyline_4"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/scp_class_circle" />
+
+                <ImageView
+                    android:id="@+id/scp_euclid_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="@id/scp_class_circle"
+                    app:layout_constraintEnd_toEndOf="@id/scp_class_circle"
+                    app:layout_constraintStart_toStartOf="@id/scp_class_circle"
+                    app:layout_constraintTop_toTopOf="@id/scp_class_circle"
+                    app:srcCompat="@drawable/scp_euclid_icon" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_disruption"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="10dp"
+                android:background="#d6eaf2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_classification">
+
+                <View
+                    android:id="@+id/iv_bar"
+                    style="@style/VerticalBar"
+                    android:background="#0087bd"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_disruption_class_title"
+                    style="@style/TextAppearance.MyTheme.Headline7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/keyline_4"
+                    android:text="@string/disruption_title"
+                    android:textAllCaps="true"
+                    android:textColor="@color/material_on_surface_emphasis_high_type"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_class_body"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/tv_class_body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/keyline_4"
+                    android:text="@string/vlam"
+                    android:textAllCaps="true"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    android:textColor="@color/material_on_surface_emphasis_high_type"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_disruption_class_title" />
+
+
+                <ImageView
+                    android:id="@+id/iv_class_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/keyline_4"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/scp_classes_shape" />
+
+                <TextView
+                    android:id="@+id/tv_class_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="2"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_class_background"
+                    app:layout_constraintStart_toStartOf="@id/iv_class_background"
+                    app:layout_constraintTop_toTopOf="@id/iv_class_background" />
+
+
+                <ImageView
+                    android:id="@+id/iv_class_circle"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="5dp"
+                    android:scaleType="centerCrop"
+                    android:tint="#0087bd"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_class_background"
+                    app:layout_constraintEnd_toEndOf="@id/iv_class_background"
+                    app:layout_constraintTop_toTopOf="@id/iv_class_background"
+                    app:srcCompat="@drawable/scp_class_circle" />
+
+                <ImageView
+                    android:id="@+id/iv_class"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_class_circle"
+                    app:layout_constraintEnd_toEndOf="@id/iv_class_circle"
+                    app:layout_constraintStart_toStartOf="@id/iv_class_circle"
+                    app:layout_constraintTop_toTopOf="@id/iv_class_circle"
+                    app:srcCompat="@drawable/disruption_vlam" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_risk"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="10dp"
+                android:background="#d6eee6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_disruption">
+
+                <View
+                    android:id="@+id/bar_risk"
+                    style="@style/VerticalBar"
+                    android:background="#009f6b"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/risk_title"
+                    style="@style/TextAppearance.MyTheme.Headline7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/keyline_4"
+                    android:text="@string/risk_title"
+                    android:textAllCaps="true"
+                    android:textColor="@color/material_on_surface_emphasis_high_type"
+                    app:layout_constraintBottom_toTopOf="@+id/risk_definition"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/risk_definition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/keyline_4"
+                    android:text="@string/Notice"
+                    android:textAllCaps="true"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    android:textColor="@color/material_on_surface_emphasis_high_type"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/risk_title" />
+
+
+                <ImageView
+                    android:id="@+id/scp_risk_rectangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/keyline_4"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/scp_classes_shape" />
+
+                <TextView
+                    android:id="@+id/tvRisk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="1"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/scp_risk_rectangle"
+                    app:layout_constraintStart_toStartOf="@id/scp_risk_rectangle"
+                    app:layout_constraintTop_toTopOf="@id/scp_risk_rectangle" />
+
+                <ImageView
+                    android:id="@+id/iv_risk_circle"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="5dp"
+                    android:scaleType="centerCrop"
+                    android:tint="#009f6b"
+                    app:layout_constraintBottom_toBottomOf="@id/scp_risk_rectangle"
+                    app:layout_constraintEnd_toEndOf="@id/scp_risk_rectangle"
+                    app:layout_constraintTop_toTopOf="@id/scp_risk_rectangle"
+                    app:srcCompat="@drawable/scp_class_circle" />
+
+                <ImageView
+                    android:id="@+id/iv_risk"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_risk_circle"
+                    app:layout_constraintEnd_toEndOf="@id/iv_risk_circle"
+                    app:layout_constraintStart_toStartOf="@id/iv_risk_circle"
+                    app:layout_constraintTop_toTopOf="@id/iv_risk_circle"
+                    app:srcCompat="@drawable/risk_notice" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/keyline_4"
+                android:layout_marginTop="@dimen/keyline_4"
+                android:text="@string/group_scp_example"
+                android:textAppearance="?attr/textAppearanceOverline"
+                android:textColor="@color/material_on_surface_emphasis_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_risk" />
+
+            <TextView
+                android:id="@+id/tv_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/keyline_4"
+                android:firstBaselineToTopHeight="40dp"
+                android:text="@string/item_number"
+                android:textAllCaps="true"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="@color/material_on_surface_emphasis_high_type"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_role" />
+
+            <TextView
+                android:id="@+id/tv_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/scp_2105"
+                android:textAppearance="?attr/textAppearanceHeadline4"
+                android:textColor="@color/material_on_surface_emphasis_high_type"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_item_title"
+                app:layout_constraintStart_toEndOf="@+id/tv_item_title" />
+
+
+            <TextView
+                android:id="@+id/tv_level_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/keyline_4"
+                android:text="@string/level_restricted"
+                android:textAllCaps="true"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="@color/material_on_surface_emphasis_high_type"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_item_title"
+                app:layout_constraintStart_toStartOf="@+id/tv_level_title" />
+
+            <TextView
+                android:id="@+id/tv_level_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/keyline_4"
+                android:text="@string/level_2"
+                android:textAllCaps="true"
+                android:textAppearance="?attr/textAppearanceHeadline5"
+                android:textColor="@color/material_on_surface_emphasis_high_type"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tv_level_description"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <View
+                android:id="@+id/bar_level_0"
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                android:layout_marginStart="@dimen/keyline_4"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="@dimen/keyline_4"
+                android:background="#0087bd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_item_title" />
+
+            <View
+                android:id="@+id/bar_level_1"
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                android:layout_marginStart="@dimen/keyline_4"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="@dimen/keyline_4"
+                android:layout_marginBottom="@dimen/keyline_4"
+                android:background="#0087bd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bar_level_0" />
+
+            <!-- TODO: not centered, why different margins?-->
+            <TextView
+                android:id="@+id/scp_card_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/keyline_4"
+                android:layout_marginEnd="@dimen/keyline_4"
+                android:firstBaselineToTopHeight="@dimen/keyline_5"
+                android:justificationMode="inter_word"
+                android:text="@string/scp_2105_lore"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@color/material_on_surface_emphasis_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bar_level_1" />
+
+            <!--TODO: decide if we can use the symbols group on the left (see http://www.scp-wiki.net/component:anomaly-class-bar)-->
+            <Button
+                android:id="@+id/scp_card_button_one"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/keyline_2"
+                android:layout_marginTop="@dimen/keyline_5"
+                android:layout_marginEnd="@dimen/keyline_0"
+                android:layout_marginBottom="@dimen/keyline_2"
+                android:text="@string/play"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scp_card_body" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
