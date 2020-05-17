@@ -100,7 +100,7 @@
                     app:layout_constraintEnd_toEndOf="@id/scp_class_circle"
                     app:layout_constraintStart_toStartOf="@id/scp_class_circle"
                     app:layout_constraintTop_toTopOf="@id/scp_class_circle"
-                    app:srcCompat="@drawable/scp_euclid_icon" />
+                    app:srcCompat="@drawable/scp_containment_euclid_icon" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

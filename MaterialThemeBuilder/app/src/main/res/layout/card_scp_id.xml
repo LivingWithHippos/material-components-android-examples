@@ -42,7 +42,7 @@
                 app:mode="containment"
                 app:classTitleText="@string/containment_class"
                 app:classBodyText="@string/euclid"
-                app:classPicture="@drawable/scp_euclid_icon"
+                app:classPicture="@drawable/scp_containment_euclid_icon"
                 app:darkColor="#ffd300"
                 app:lightColor="#fcf5d6"
                 />
