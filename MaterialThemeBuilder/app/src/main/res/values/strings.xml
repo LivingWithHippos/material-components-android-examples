@@ -169,4 +169,8 @@
     <string name="scp_risk_danger">Danger</string>
     <string name="scp_risk_critical">Critical</string>
 
+    <string name="scp_clearance_level">Level: %d</string>
+    <string name="scp_clearance_level_unrestricted">Unrestricted</string>
+    <string name="scp_clearance_level_restricted">Restricted</string>
+
 </resources>

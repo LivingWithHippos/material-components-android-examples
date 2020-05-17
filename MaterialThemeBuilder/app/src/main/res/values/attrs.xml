@@ -67,7 +67,7 @@
         <attr name="rolePicture" format="reference"/>
     </declare-styleable>
 
-    <!--SCP Text Class View attributes (like disruption and risk) -->
+    <!--SCP Secondary Class View attributes (like disruption and risk) -->
     <declare-styleable name="SCPSecondaryClassView">
         <attr name="classTitleText" format="string"/>
         <attr name="classBodyText" format="string"/>
@@ -85,5 +85,42 @@
         <attr name="backgroundPicture" format="reference"/>
         <attr name="backgroundColor" format="color"/>
     </declare-styleable>
-    
+
+    <!--SCP id card View attributes -->
+    <declare-styleable name="SCPCardView">
+        <attr name="containment" format="enum">
+            <enum name="safe" value="0"/>
+            <enum name="euclid" value="1"/>
+            <enum name="keter" value="2"/>
+            <enum name="esoteric" value="3"/>
+            <enum name="neutralized" value="4"/>
+            <enum name="pending" value="5"/>
+            <enum name="explained" value="6"/>
+        </attr>
+        <!-- these start from 1 on purpose so they match their level -->
+        <attr name="disruption" format="enum">
+            <enum name="dark" value="1"/>
+            <enum name="vlam" value="2"/>
+            <enum name="keneq" value="3"/>
+            <enum name="ekhi" value="4"/>
+            <enum name="amida" value="5"/>
+        </attr>
+        <attr name="risk" format="enum">
+            <enum name="notice" value="1"/>
+            <enum name="caution" value="2"/>
+            <enum name="warning" value="3"/>
+            <enum name="danger" value="4"/>
+            <enum name="critical" value="5"/>
+        </attr>
+        <attr name="clearance" format="enum">
+            <enum name="unrestricted" value="1"/>
+            <enum name="restricted" value="2"/>
+            <enum name="confidential" value="3"/>
+            <enum name="secret" value="4"/>
+            <enum name="top_secret" value="5"/>
+            <enum name="cosmic_top_secret" value="6"/>
+        </attr>
+        <attr name="scpNumber" format="string"/>
+        <attr name="scpDescription" format="string"/>
+    </declare-styleable>
 </resources>
