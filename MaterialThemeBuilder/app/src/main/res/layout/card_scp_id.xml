@@ -58,7 +58,7 @@
                 app:classTitleText="@string/disruption_title"
                 app:classBodyText="@string/vlam"
                 app:classNumber="2"
-                app:classPicture="@drawable/scp_disruption_vlam"
+                app:classPicture="@drawable/scp_disruption_vlam_icon"
                 app:darkColor="#0087bd"
                 app:lightColor="#d6eaf2"
                 />

@@ -89,6 +89,6 @@
             app:layout_constraintEnd_toEndOf="@id/iv_class_circle"
             app:layout_constraintStart_toStartOf="@id/iv_class_circle"
             app:layout_constraintTop_toTopOf="@id/iv_class_circle"
-            app:srcCompat="@drawable/scp_disruption_vlam" />
+            app:srcCompat="@drawable/scp_disruption_vlam_icon" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
