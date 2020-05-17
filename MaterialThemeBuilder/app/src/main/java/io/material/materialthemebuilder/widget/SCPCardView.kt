@@ -188,7 +188,6 @@ class SCPCardView @JvmOverloads constructor(
         clearanceLevelValue = a.getInteger(R.styleable.SCPCardView_clearance, clearanceLevelValue)
         scpNumberText = a.getString(R.styleable.SCPCardView_scpNumber) ?: scpNumberText
         scpDescriptionText = a.getString(R.styleable.SCPCardView_scpDescription) ?: scpDescriptionText
-        val c = 0
 
     }
 }
