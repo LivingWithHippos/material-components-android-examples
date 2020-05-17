@@ -18,6 +18,7 @@ import io.material.materialthemebuilder.R
 import io.material.materialthemebuilder.utilities.SCP_VIEW_MODE_CONTAINMENT
 import io.material.materialthemebuilder.utilities.setIntColor
 
+//todo: rename to SCPClassView
 class SCPSecondaryClassView @JvmOverloads constructor(
         context: Context,
         attrs: AttributeSet? = null,
@@ -71,7 +72,7 @@ class SCPSecondaryClassView @JvmOverloads constructor(
             field = value
         }
 
-    private var lightFillColor: Int = Color.parseColor("#0c0c0c")
+    var lightFillColor: Int = Color.parseColor("#0c0c0c")
         set(value) {
             rootLayout.setBackgroundColor(value)
             field = value
@@ -92,7 +93,7 @@ class SCPSecondaryClassView @JvmOverloads constructor(
             field = value
         }
 
-    private var classPic: Drawable? = null
+    var classPic: Drawable? = null
         set(value) {
             if (value == null) {
                 classImageView.visibility = View.INVISIBLE
@@ -103,25 +104,30 @@ class SCPSecondaryClassView @JvmOverloads constructor(
             field = value
         }
 
-    private var classNumberText: String = ""
+    var classNumberText: String = ""
         set(value) {
-            classNumberTextView.text = value
+            if (value.isBlank())
+                classNumberTextView.visibility = View.INVISIBLE
+            else {
+                classNumberTextView.text = value
+                classNumberTextView.visibility = View.VISIBLE
+            }
             field = value
         }
 
-    private var classTitleText: String = ""
+    var classTitleText: String = ""
         set(value) {
             classTitleTextView.text = value
             field = value
         }
 
-    private var classBodyText: String = ""
+    var classBodyText: String = ""
         set(value) {
             classBodyTextView.text = value
             field = value
         }
 
-    private var modeID: Int = 1
+    var modeID: Int = 1
         set(value) {
 
             when(value){
