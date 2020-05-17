@@ -18,15 +18,17 @@
         <TextView
             android:id="@+id/tv_class_title"
             style="@style/TextAppearance.MyTheme.Headline7"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/keyline_4"
             android:text="@string/disruption_title"
             android:textAllCaps="true"
+            android:ellipsize="start"
             android:textColor="@color/material_on_surface_emphasis_high_type"
             app:layout_constraintBottom_toTopOf="@+id/tv_class_body"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
             app:layout_constraintVertical_chainStyle="packed" />
 
         <TextView
@@ -43,14 +45,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_class_title" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="90dp" />
 
         <ImageView
             android:id="@+id/iv_class_background"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/keyline_4"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/scp_classes_shape" />
@@ -91,4 +99,5 @@
             app:layout_constraintTop_toTopOf="@id/iv_class_circle"
             app:srcCompat="@drawable/scp_disruption_vlam_icon" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

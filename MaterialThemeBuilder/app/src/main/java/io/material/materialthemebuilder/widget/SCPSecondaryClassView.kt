@@ -132,8 +132,8 @@ class SCPSecondaryClassView @JvmOverloads constructor(
 
             when(value){
                 SCP_VIEW_MODE_CONTAINMENT -> {
-                    classBackgroundImageView.visibility = View.GONE
-                    classNumberTextView.visibility = View.GONE
+                    classBackgroundImageView.visibility = View.INVISIBLE
+                    classNumberTextView.visibility = View.INVISIBLE
                     val circleSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80f, resources.displayMetrics)
                     val marginSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 16f, resources.displayMetrics)
                     val strokeSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4f, resources.displayMetrics)
