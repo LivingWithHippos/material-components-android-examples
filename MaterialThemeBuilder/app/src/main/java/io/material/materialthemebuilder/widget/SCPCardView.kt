@@ -34,7 +34,7 @@ class SCPCardView @JvmOverloads constructor(
                         context.getString(R.string.scp_containment),
                         context.getString(R.string.scp_containment_safe),
                         context.getColor(R.color.safe),
-                        context.getColor(R.color.safe_light),
+                        context.getColor(R.color.safe_secondary),
                         context.getDrawable(R.drawable.scp_containment_safe_icon) )
 
                 CONTAINMENT_CLASS_EUCLID -> setupSCPClassView(
@@ -43,7 +43,7 @@ class SCPCardView @JvmOverloads constructor(
                         context.getString(R.string.scp_containment),
                         context.getString(R.string.scp_containment_euclid),
                         context.getColor(R.color.euclid),
-                        context.getColor(R.color.euclid_light),
+                        context.getColor(R.color.euclid_secondary),
                         context.getDrawable(R.drawable.scp_containment_euclid_icon) )
 
                 CONTAINMENT_CLASS_KETER -> setupSCPClassView(
@@ -52,7 +52,7 @@ class SCPCardView @JvmOverloads constructor(
                         context.getString(R.string.scp_containment),
                         context.getString(R.string.scp_containment_keter),
                         context.getColor(R.color.keter),
-                        context.getColor(R.color.keter_light),
+                        context.getColor(R.color.keter_secondary),
                         context.getDrawable(R.drawable.scp_containment_keter_icon) )
 
             }
@@ -70,7 +70,7 @@ class SCPCardView @JvmOverloads constructor(
                         context.getString(R.string.scp_disruption),
                         context.getString(R.string.scp_disruption_dark),
                         context.getColor(R.color.dark),
-                        context.getColor(R.color.dark_light),
+                        context.getColor(R.color.dark_secondary),
                         context.getDrawable(R.drawable.scp_disruption_dark_icon),
                         DISRUPTION_CLASS_DARK )
 
@@ -80,7 +80,7 @@ class SCPCardView @JvmOverloads constructor(
                         context.getString(R.string.scp_disruption),
                         context.getString(R.string.scp_disruption_vlam),
                         context.getColor(R.color.vlam),
-                        context.getColor(R.color.vlam_light),
+                        context.getColor(R.color.vlam_secondary),
                         context.getDrawable(R.drawable.scp_disruption_vlam_icon),
                         DISRUPTION_CLASS_VLAM )
 
@@ -98,7 +98,7 @@ class SCPCardView @JvmOverloads constructor(
                         context.getString(R.string.scp_risk),
                         context.getString(R.string.scp_risk_notice),
                         context.getColor(R.color.notice),
-                        context.getColor(R.color.notice_light),
+                        context.getColor(R.color.notice_secondary),
                         context.getDrawable(R.drawable.scp_risk_notice_icon),
                         RISK_CLASS_NOTICE )
 
@@ -108,7 +108,7 @@ class SCPCardView @JvmOverloads constructor(
                         context.getString(R.string.scp_risk),
                         context.getString(R.string.scp_risk_caution),
                         context.getColor(R.color.caution),
-                        context.getColor(R.color.caution_light),
+                        context.getColor(R.color.caution_secondary),
                         context.getDrawable(R.drawable.scp_risk_caution_icon),
                         RISK_CLASS_CAUTION )
 
